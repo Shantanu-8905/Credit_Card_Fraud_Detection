@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/indexstyle.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card Fraud Prediction</title>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Left Section -->
+    <div class="left-section">
+      <div class="intro-card">
+        <h2>Credit Card Fraud Prediction</h2>
+        <p>Predict fraudulent transactions quickly and accurately.</p>
+        <a href="https://www.bajajfinserv.in/insurance/types-of-credit-card-fraud-and-how-you-can-avoid-them" target="_blank" rel="noopener noreferrer">
+          <button>Learn More</button>
+      </a>
+        
+      </div>
+    </div>
+
+    <!-- Center Section - Form for Input -->
+    <div class="center-section">
+      <div class="prediction-form">
+        <form action="{{ url_for('predict') }}" method="POST">
+          <label for="time">Time</label>
+          <input type="text" id="time" name="time" placeholder="Enter transaction time" required>
+
+          <label for="amount">Amount</label>
+          <input type="text" id="amount" name="amount" placeholder="Enter transaction amount" required>
+
+          <label for="tm">Transaction Method</label>
+          <input type="text" id="tm" name="tm" placeholder="Enter transaction method" required>
+
+          <label for="ti">Transaction ID</label>
+          <input type="text" id="ti" name="ti" placeholder="Enter transaction ID" required>
+
+          <label for="ct">Card Type</label>
+          <input type="text" id="ct" name="ct" placeholder="Enter card type" required>
+
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" placeholder="Enter location" required>
+
+          <label for="em">Bank</label>
+          <input type="text" id="em" name="em" placeholder="Enter bank" required>
+
+          <button type="submit" class="predict-button">Predict Fraud</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Right Section - Prediction Output -->
+    <div class="right-section">
+      <div class="results-card">
+        <p>Prediction Result:</p>
+        <p>Transaction Status: <span id="transaction-status">Pending</span></p>
+      
+      </div>
+    </div>
+  </div>
+</body>
+</html>
