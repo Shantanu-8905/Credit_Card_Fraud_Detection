@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: white;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-section, .center-section, .right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro-card, .prediction-form, .results-card {
+  background: linear-gradient(135deg, #2e026a, #151515);
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.intro-card button, .predict-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #540d6e;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.intro-card button:hover, .predict-button:hover {
+  background-color: #7b2cbf;
+}
+
+.join-button {
+  background-color: #f72585;
+}
+
+.prediction-form label {
+  display: block;
+  font-size: 0.9em;
+  margin-top: 10px;
+  color: #bbb;
+}
+
+.prediction-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #222;
+  color: white;
+}
+
+.prediction-form input::placeholder {
+  color: #777;
+}
+
+.predict-button {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #540d6e;
+}
+
+.results-card {
+  font-size: 1.2em;
+  padding: 20px;
+  text-align: center;
+}
+
+#transaction-status {
+  color: #03dac5;
+  font-weight: bold;
+}
+
+#confidence-score {
+  font-weight: bold;
+  color: #ff5252;
+}
