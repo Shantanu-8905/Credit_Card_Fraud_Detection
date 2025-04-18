@@ -17,3 +17,22 @@ finaldata.csv: Preprocessed dataset ready for model input.​
 templates/: HTML templates for the Flask application's frontend.​
 
 static/css/: CSS files for styling the Flask application's frontend.
+
+## 📊 Dataset
+The dataset used is a publicly available credit card transaction dataset, which includes both fraudulent and legitimate transactions. Due to confidentiality, feature names have been anonymized. The dataset is highly imbalanced, with fraudulent transactions constituting a small fraction of the total.​
+
+## 🛠️ Features
+Implementation of multiple machine learning models for fraud detection.​
+
+
+Web application for real-time prediction using the trained model.​
+
+
+Preprocessed datasets for immediate use.
+
+## 📌 Note
+The model's performance may vary due to the imbalanced nature of the dataset. It's recommended to explore techniques such as resampling or using different evaluation metrics (e.g., precision, recall, F1-score) for better assessment.​
+
+
+
+
